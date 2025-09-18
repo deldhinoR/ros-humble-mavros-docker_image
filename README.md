@@ -1,19 +1,23 @@
-# ros-humble-mavros-docker_image
-Features
+# ROS 2 Humble + MAVROS Docker Image
 
-ROS 2 Humble Desktop installed
+A ready-to-use **ROS 2 Humble Desktop** Docker image with **MAVROS** and all required dependencies installed. Designed for drone simulation and MAVLink-compatible projects.
 
-MAVROS and MAVROS extras (ros-humble-mavros, ros-humble-mavros-extras)
+---
 
-GeographicLib datasets installed (required by MAVROS)
+## Features
 
-Non-root ubuntu user (UID/GID 1000) for safer container usage
+- ROS 2 Humble Desktop installed  
+- MAVROS and MAVROS extras (`ros-humble-mavros`, `ros-humble-mavros-extras`)  
+- GeographicLib datasets installed (required by MAVROS)  
+- Non-root `ubuntu` user (UID/GID 1000) for safer container usage  
+- Workspace directory: `/home/ubuntu/ros2_ws`  
+- ROS environment automatically sourced  
 
-Workspace directory: /home/ubuntu/ros2_ws
+---
 
-ROS environment automatically sourced
+## Usage
 
-#USAGE
+### Pull the image
+
+```bash
 docker pull ghcr.io/deldhinor/ros2-humble-mavros:latest
-#Run the Container
-docker run -it --rm ghcr.io/deldhinor/ros2-humble-mavros:latest
